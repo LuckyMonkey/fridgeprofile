@@ -1,0 +1,7 @@
+BootCurrent: 0001
+Timeout: 5 seconds
+BootOrder: 0001,0080,0000
+Boot0000* grubuefi	HD(4,GPT,f84b2eb5-097b-4e5a-9762-4b9945650d9c,0xc6e940,0x3d2130)/File(\EFI\grubuefi\grubx64.efi)
+Boot0001* ubuntu	HD(1,GPT,64a4f8a0-2ebc-46f9-a028-ae6f807f5c7f,0x800,0x219800)/File(\EFI\ubuntu\shimx64.efi)
+Boot0080* Mac OS X	PciRoot(0x0)/Pci(0x1f,0x2)/Sata(0,0,0)/HD(2,GPT,6d152bd7-b492-4ccb-9900-091c63318c36,0x64028,0xece2340)
+BootFFFF* 	PciRoot(0x0)/Pci(0x1f,0x2)/Sata(0,0,0)/HD(2,GPT,000029c7-38e2-0000-9b43-0000061e0000,0x64028,0x3a1ec0c0)/File(\System\Library\CoreServices\boot.efi)
