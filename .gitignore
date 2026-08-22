@@ -1,0 +1,18 @@
+# Runtime output from ad hoc local runs.
+server_profile_*.txt
+
+# Local credentials and state must stay out of the backup repo.
+.codex/auth.json
+.codex/history.jsonl
+.codex/*.sqlite
+.codex/*.sqlite-shm
+.codex/*.sqlite-wal
+.codex/cache/
+.codex/sessions/
+.codex/tmp/
+.codex/.tmp/
+*.pem
+*.key
+*.token
+*.secret
+*.env
