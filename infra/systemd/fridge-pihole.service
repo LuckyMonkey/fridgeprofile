@@ -1,0 +1,16 @@
+[Unit]
+Description=Fridge Pi-hole DNS service
+Requires=docker.service
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/home/fridge/fridge-agents/pihole
+ExecStart=/home/fridge/fridge-agents/pihole/start-pihole.sh
+ExecStop=/usr/bin/docker compose --env-file /home/fridge/fridge-agents/pihole/.env -f /home/fridge/fridge-agents/pihole/docker-compose.yml down
+TimeoutStartSec=120
+
+[Install]
+WantedBy=multi-user.target
