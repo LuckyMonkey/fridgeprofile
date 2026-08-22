@@ -1,0 +1,17 @@
+[Unit]
+Description=Fridge startup success tone after terminal boot
+Documentation=file:/home/fridge/fridge-docs/runbooks/fridge-success-tone-runbook.md
+After=multi-user.target getty.target sound.target systemd-udev-settle.service
+Wants=sound.target
+
+[Service]
+Type=oneshot
+Environment=HOME=/home/fridge
+Environment=FRIDGE_SUCCESS_TONE_ALSA_CARD=0
+Environment=FRIDGE_SUCCESS_TONE_ALSA_DEVICE=plughw:0,0
+ExecStartPre=/usr/bin/sleep 12
+ExecStart=/home/fridge/fridge-recovery/scripts/fridge-startup-tone.sh --method aplay
+TimeoutStartSec=30
+
+[Install]
+WantedBy=multi-user.target
