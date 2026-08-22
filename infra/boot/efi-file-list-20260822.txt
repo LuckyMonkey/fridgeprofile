@@ -1,0 +1,8 @@
+/boot/efi/EFI/BOOT/BOOTX64.EFI	966664 bytes
+/boot/efi/EFI/BOOT/fbx64.efi	88344 bytes
+/boot/efi/EFI/BOOT/mmx64.efi	856280 bytes
+/boot/efi/EFI/ubuntu/BOOTX64.CSV	108 bytes
+/boot/efi/EFI/ubuntu/grub.cfg	121 bytes
+/boot/efi/EFI/ubuntu/grubx64.efi	2598792 bytes
+/boot/efi/EFI/ubuntu/mmx64.efi	856280 bytes
+/boot/efi/EFI/ubuntu/shimx64.efi	966664 bytes
