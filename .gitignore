@@ -16,3 +16,10 @@ server_profile_*.txt
 *.token
 *.secret
 *.env
+
+# Binary backup payloads are kept outside GitHub; publish text-safe .b64
+# artifacts when a connector cannot push normal git objects.
+infra/archives/*.tar
+infra/archives/*.tar.gz
+infra/archives/*.tar.zst
+generated/
